@@ -15,7 +15,7 @@ linters:
     enabled: true
     style: double_quotes
   IdSelector:
-    enabled: false
+    enabled: true
   NestingDepth:
     enabled: false
   SelectorDepth:

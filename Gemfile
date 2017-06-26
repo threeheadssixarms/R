@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem "rails", "~> 5.0.4"
+gem "bootstrap-sass", "3.3.7"
 gem "sqlite3"
 gem "puma", "~> 3.0"
 gem "sass-rails", "~> 5.0"
@@ -27,20 +28,27 @@ group :development do
 end
 
 group :test do
-   gem "rspec-collection_matchers"
-   gem "rubocop", require: false
-   gem "rubocop-checkstyle_formatter", require: false
-   gem "scss_lint", require: false
-   gem "scss_lint_reporter_checkstyle", require: false
-   gem "rails_best_practices"
-   gem "brakeman", require: false
-   gem "bundler-audit"
-   gem "reek"
-   gem "rails-controller-testing"
-   gem "simplecov", require: false
-   gem "rspec-activemodel-mocks"
-   gem "rspec-rails", "~> 3.6"
-   gem "eslint-rails", git: "https://github.com/octoberstorm/eslint-rails"
+  gem "minitest-reporters", "1.1.14"
+  gem "guard", "2.13.0"
+  gem "guard-minitest", "2.4.4"
+  gem "rspec-collection_matchers"
+  gem "rubocop", require: false
+  gem "rubocop-checkstyle_formatter", require: false
+  gem "scss_lint", require: false
+  gem "scss_lint_reporter_checkstyle", require: false
+  gem "rails_best_practices"
+  gem "brakeman", require: false
+  gem "bundler-audit"
+  gem "reek"
+  gem "rails-controller-testing"
+  gem "simplecov", require: false
+  gem "rspec-activemodel-mocks"
+  gem "rspec-rails", "~> 3.6"
+  gem "eslint-rails", git: "https://github.com/octoberstorm/eslint-rails"
  end
+
+group :production do
+  gem "pg"
+end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
