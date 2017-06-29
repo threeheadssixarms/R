@@ -1,5 +1,6 @@
 module ApplicationHelper
   def full_title page_title
-    page_title.empty? ? t("rails") : (page_title + " | " + t("rails"))
+    rails = t "rails"
+    page_title.empty? ? rails : (page_title + " | " + rails)
   end
 end
