@@ -178,3 +178,17 @@ input {
     color: $red;
   }
 }
+
+.checkbox {
+  margin-bottom: 10px;
+  margin-top: -10px;
+
+  span {
+    font-weight: normal;
+  }
+}
+
+.remember-me {
+  margin-left: 0;
+  width: auto;
+}
