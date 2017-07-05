@@ -8,3 +8,9 @@ FeatureEnvy:
   enabled: false
 InstanceVariableAssumption:
   enabled: false
+Attribute:
+  exclude:
+    - "User#remember_token"
+DuplicateMethodCall:
+  exclude:
+    - "SessionsHelper#current_user"
