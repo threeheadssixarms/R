@@ -75,3 +75,18 @@ en:
   account_not_activated:
     "Account not activated. Check your email for the activation link."
   hi: "Hi"
+  forgot_password: "Forgot password"
+  forgot_password_in_brackets: "(forgot password)"
+  reset_pw_email: "Email sent with password reset instructions"
+  email_not_found: "Email address not found"
+  password_reset: "Password reset"
+  reset_password_message: |
+    If you did not request your password to be reset, please ignore this email and
+    your password will stay as it is.
+
+    To reset your password click the link below. This link will expire in two hours.
+  reset_password: "Reset password"
+  update_password: "Update password"
+  cant_be_empty: "can't be empty"
+  pw_has_been_reset: "Password has been reset."
+  pw_reset_has_expired: "Password reset has expired."
