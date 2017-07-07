@@ -9,6 +9,8 @@ $violet: #bbb;
 $white: #fff;
 $gray-lighter: #eaeaea;
 $graywhite: #e8e8e8;
+$lightblue: #00f;
+$gray: #808080;
 
 body {
   padding-top: 60px;
@@ -156,6 +158,54 @@ aside {
 .gravatar-edit {
   margin-top: 15px;
 }
+
+.stats {
+  margin-top: 0;
+  overflow: auto;
+  padding: 0;
+
+  a {
+    border-left: 1px solid $gray-lighter;
+    color: $gray;
+    float: left;
+    padding: 0 10px;
+
+    &:first-child {
+      border: 0;
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $lightblue;
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
+
+.user-avatars {
+  margin-top: 10px;
+  overflow: auto;
+
+  .gravatar {
+    margin: 1px;
+  }
+
+  a {
+    padding: 0;
+  }
+}
+
+.users {
+  .follow {
+    padding: 0;
+  }
+}
+
+// forms
 
 input,
 textarea,

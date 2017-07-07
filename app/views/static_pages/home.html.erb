@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <%= render "static_pages/news_feed", micropost: @micropost,
-    feed_items: @feed_items %>
+    feed_items: @feed_items, user: @user %>
 <% else %>
   <%= render "static_pages/homepage" %>
 <% end %>

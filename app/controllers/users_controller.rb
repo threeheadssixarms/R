@@ -11,6 +11,10 @@ class UsersController < ApplicationController
   def show
     @microposts = @user.microposts.most_recent.paginate page: params[:page],
       per_page: Settings.per_page
+    relationships = current_user.active_relationships
+    unless @relationship = relationships.find_by(followed_id: @user.id)
+      @relationship = relationships.build
+    end
   end
 
   def new
@@ -43,10 +47,6 @@ class UsersController < ApplicationController
     @user.destroy
     flash[:success] = t "user_deleted"
     redirect_to users_url
-  end
-
-  def send_activation_email
-    UserMailer.account_activation(self).deliver_now
   end
 
   private

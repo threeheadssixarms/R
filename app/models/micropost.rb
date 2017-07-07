@@ -9,6 +9,9 @@ class Micropost < ApplicationRecord
   validate :picture_size
 
   scope :most_recent, ->{order created_at: :desc}
+  scope :available, -> user do
+    where "user_id IN (?) OR user_id = ?", user.following_ids, user.id
+  end
 
   mount_uploader :picture, PictureUploader
 
