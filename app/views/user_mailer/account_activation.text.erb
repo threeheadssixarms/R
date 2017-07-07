@@ -1,0 +1,5 @@
+<%= @greeting %> <%= @user.name %>,
+
+<%= t "click_on_the_link" %>
+
+<%= edit_account_activation_url @user.activation_token, email: @user.email %>
