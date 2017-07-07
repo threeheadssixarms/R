@@ -17,9 +17,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t "welcome"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "check_your_email"
+      redirect_to root_url
     else
       render :new
     end
@@ -40,6 +40,10 @@ class UsersController < ApplicationController
     @user.destroy
     flash[:success] = t "user_deleted"
     redirect_to users_url
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
   end
 
   private

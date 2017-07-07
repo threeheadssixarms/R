@@ -66,3 +66,12 @@ en:
   delete: "delete"
   you_sure: "You sure?"
   user_deleted: "User deleted"
+  account_activation: "Account activation"
+  click_on_the_link:
+    "Welcome to the Sample App! Click on the link below to activate your account:"
+  check_your_email: "Please check your email to activate your account"
+  account_activated: "Account activated!"
+  invalid_activation_link: "Invalid activation link"
+  account_not_activated:
+    "Account not activated. Check your email for the activation link."
+  hi: "Hi"
