@@ -8,8 +8,9 @@ FeatureEnvy:
   enabled: false
 InstanceVariableAssumption:
   enabled: false
-Attribute: 
+Attribute:
   enabled: false
 DuplicateMethodCall:
   exclude:
     - "SessionsHelper#current_user"
+    - "PasswordResetsController#update"
